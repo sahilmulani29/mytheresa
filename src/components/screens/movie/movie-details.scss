@@ -1,0 +1,43 @@
+.details-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  flex-direction: row;
+  padding: 20px;
+}
+
+.main-info {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  width: 100%;
+}
+
+.img-raw {
+  padding: 20px;
+  width: 45%;
+  height: 30%;
+}
+
+.detail-img {
+    // width: 400px;
+    height: 450px;
+    float: right;
+}
+
+.info-raw {
+    padding: 20px;
+    width: 45%;
+    height: 30%;
+}
+.common-pad{
+    padding: 5px 0;
+}
+
+@media screen and (max-width: 450px) {
+  .carousel-info {
+    width: 100%;
+  }
+}
+

@@ -1,0 +1,57 @@
+.carousel {
+  position: relative;
+  overflow: hidden;
+  padding: 26px;
+}
+
+.carousel-container {
+    padding: 0 10px;
+    display: flex;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+    background-color: #212121;
+    overflow: hidden;
+}
+.next-btn p, .pre-btn p {
+    z-index: 9999;
+}
+.movie-cat{
+    color: #ffffff;
+    font-size: 23px;
+    padding: 5px 7px;
+    margin: 0 0;
+    padding: 5px 7px 5px 26px;
+}
+.pre-btn{
+    left: 0px;
+}
+
+
+.pre-btn,
+.next-btn {
+  border: none;
+  width: 60px;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0);
+}
+
+.next-btn {
+  right: 0;
+}
+
+.next-btn p,
+.pre-btn p {
+  font-size: 50px;
+  background-color: rgba(255, 255, 255, 0.436);
+  box-shadow: 0px 0px 10px 1px black;
+  border-radius: 10px;
+  color: rgb(0, 0, 0);
+  width: 50px;
+  height: 50px;
+  cursor: pointer;
+}

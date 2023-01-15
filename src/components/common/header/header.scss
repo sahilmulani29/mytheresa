@@ -1,0 +1,42 @@
+.header-bar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 60;
+    background-color: black;
+}
+.headercover{
+    width: 95%;
+    margin: auto;
+    padding-left: 25px;
+}
+.row {
+  width: 100%;
+  height: 70px;
+  background-color: rgba(0, 0, 0, 0.5);
+  -webkit-backdrop-filter: blur(4px);
+  backdrop-filter: blur(4px);
+  font-family: SFProText-Regular;
+}
+
+.header-container {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.title{
+    padding-top: 20px;
+    // padding-left: 30px;
+    font-size: 25px;
+    cursor: pointer;
+}
+
+.wish-list{
+    padding-top: 20px;
+    padding-right: 30px;
+    font-size: 25px;
+    cursor: pointer;
+}

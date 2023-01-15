@@ -1,0 +1,33 @@
+.container {
+    // margin-top: 5rem;
+    width: 95%;
+    margin: 5rem auto 0;
+}
+@font-face{
+    src:url('../../../../public//assets/Poppins-Medium.ttf'); 
+    font-family: 'Poppins-Medium';  
+}
+.poppins-m{
+    font-family: 'Poppins-Medium';
+    font-size: 14px
+}
+@media screen and (max-width: 450px) {
+    .img-raw {
+      width: 100% !important; 
+      padding: 0px !important;
+    }
+    .detail-img {
+        width: 100% !important;
+    }
+    .info-raw{
+        width: 100% !important; 
+        padding: 20px 0 !important;
+    }
+    .main-info{
+        flex-direction: column !important;
+    }
+}
+
+.category-pad{
+    padding-left: 26px;
+}
