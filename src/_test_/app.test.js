@@ -7,8 +7,10 @@ import React from 'react'
 import { BrowserRouter } from 'react-router-dom'
 
 const useFetch = jest.spyOn(fetchHook, 'default')
+// To mock fetch
 global.fetch = mockFetch(APIResponse)
 
+// Mock context
 const mockAppComponent = (rootState) => {
   return (
     <AppContext.Provider

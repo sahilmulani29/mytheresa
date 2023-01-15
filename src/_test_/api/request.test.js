@@ -3,6 +3,7 @@ import { APIResponse, mockFetch } from '../mock'
 
 /* eslint-disable */
 
+// To mock fetch
 global.fetch = mockFetch(APIResponse)
 
 describe('Request component Test Cases', () => {

@@ -2,6 +2,7 @@ import { IMG_URL } from '../../constants/data-constant'
 import React from 'react'
 import { getStringCommaSaperated } from '../../utils/common-util'
 
+// This component is common for Wish List and Movie details to show to the info about movie
 export const ItemInfo = ({ details, clickHandler, isAddedToWishList, buttonLable, fromWishList }) => {
   return (
         <>

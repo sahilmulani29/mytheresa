@@ -16,6 +16,7 @@
     "plugins": [
         "react"
     ],
+    // Ignore following section while linting
     "ignorePatterns": "src/_test_",
     "rules": {
         "react/prop-types": "off"

@@ -16,6 +16,7 @@ const MovieDetails = () => {
   const state = appCtx?.rootState
 
   useEffect(() => {
+    // Get the parameters and check if we are getting category and id
     if (
       state[params.category] &&
       state[params.category].length > 0 &&
@@ -23,6 +24,7 @@ const MovieDetails = () => {
       !movieDetail.id
     ) {
       const data = state[params.category]
+      // Find parameter id if its present in specified category
       const movie = data.find((item) => item.id.toString() === params.id)
       if (movie && movie.id) {
         getMovieDetails(movie.id)
@@ -30,10 +32,13 @@ const MovieDetails = () => {
     }
   }, [params.category, params.id, state])
 
+  // Fetch all movie details by passing id to API
   const getMovieDetails = async (id) => {
+    // Set application on loading state
     appCtx.setRootStateHandler({ ...appCtx.rootState, isLoading: true })
     const response = await get(`${BASE_API}/${id}?api_key=${API_KEY}`)
     if (response.success) {
+      // If API is success then set data
       setMovieDetail(response.data)
       appCtx.setRootStateHandler({ ...appCtx.rootState, isLoading: false })
       const flag = isItemAddedToList(response.data.id, state.wishList)
@@ -44,6 +49,7 @@ const MovieDetails = () => {
   const onAddToWishListHandler = () => {
     const wishList = state.wishList
     if (isAddedToWishList) {
+      // If movie is already added to list then simply find it delete and again set context
       const index = wishList.findIndex((item) => item.id === movieDetail.id)
       wishList.splice(index, 1)
       appCtx.setRootStateHandler({
@@ -52,6 +58,7 @@ const MovieDetails = () => {
       })
       setAddedToWishList(false)
     } else {
+      // If not added then add
       wishList.push(movieDetail)
       appCtx.setRootStateHandler({
         ...appCtx.rootState,
@@ -66,6 +73,7 @@ const MovieDetails = () => {
       <div className="details-wrapper">
         {
           movieDetail && movieDetail.id
+          // Item info will display all the information of movie
             ? <ItemInfo
               details={movieDetail}
               clickHandler={onAddToWishListHandler}
@@ -73,6 +81,7 @@ const MovieDetails = () => {
               buttonLable={'add-wishlist'}
               fromWishList={false}
             />
+            // render error message
             : <div className="error-container">
               <h1>Data not found</h1>
             </div>

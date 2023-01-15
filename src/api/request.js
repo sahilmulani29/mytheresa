@@ -4,6 +4,7 @@ export const fetchRequest = async (method, url) => {
   const response = await fetch(url, {
     method
   })
+  // Added success true or false based on API response
   if (response) {
     return { data: await response.json(), success: true }
   } else {
@@ -12,6 +13,7 @@ export const fetchRequest = async (method, url) => {
 }
 
 export const fetchAllCatMovies = async () => {
+  // Mapped all categories to fetch movies
   const fetchArr = CATEGORIES_API.map((cat) =>
     fetch(`${BASE_API}/${cat}?api_key=${API_KEY}`)
   )

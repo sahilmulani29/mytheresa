@@ -1,18 +1,12 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 
-/* We are basically telling webpack to take index.js from entry. Then check for all file extensions in resolve.
-After that apply all the rules in module.rules and produce the output and place it in main.js in the public folder. */
-
 module.exports = {
-  /** "mode"
-   * the environment - development, production, none. tells webpack
-   * to use its built-in optimizations accordingly. default is production
-   */
+  // the environment - development, production, none. tells webpack
+  // to use its built-in optimizations accordingly. default is production
   mode: 'development',
-  /** "entry"
-   * the entry point
-   */
+
+  //the entry point
   entry: './index.js',
   output: {
     /** "path"
@@ -31,29 +25,28 @@ module.exports = {
    */
   target: 'web',
   devServer: {
-    /** "port"
-     * port of dev server
-     */
+
+    // Defualt port
     port: '9500',
-    /** "static"
-     * This property tells Webpack what static file it should serve
-     */
+
+    //This property tells Webpack what static file it should serve
     static: ['./public'],
-    /** "open"
-     * opens the browser after server is successfully started
-     */
+
+    //opens the browser after server is successfully started
     open: true,
-    /** "hot"
-     * enabling and disabling HMR. takes "true", "false" and "only".
-     * "only" is used if enable Hot Module Replacement without page
-     * refresh as a fallback in case of build failures
-     */
+
+    //enabling and disabling HMR. takes "true", "false" and "only".
+    //"only" is used if enable Hot Module Replacement without page
+    //refresh as a fallback in case of build failures
     hot: false,
-    /** "liveReload"
-     * disable live reload on the browser. "hot" must be set to true for this to work
-     */
+
+    //disable live reload on the browser. "hot" must be set to true for this to work
     liveReload: true,
+
+    // Setting Host
     allowedHosts: ['all'],
+
+    // Router Setting
     historyApiFallback: true,
   },
   resolve: {

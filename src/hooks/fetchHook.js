@@ -7,8 +7,10 @@ const useFetch = () => {
 
   useEffect(() => {
     (async () => {
+      // Set laoding state
       appCtx.setRootStateHandler({ ...appCtx.rootState, isLoading: true })
       const response = await fetchAllCatMovies()
+      // API success
       if (response.success) {
         appCtx.setRootStateHandler({
           ...appCtx.rootState,
@@ -17,6 +19,7 @@ const useFetch = () => {
           ...response.state
         })
       } else {
+        // API failed
         appCtx.setRootStateHandler({
           ...appCtx.rootState,
           isLoading: false,

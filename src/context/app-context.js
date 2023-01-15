@@ -1,5 +1,6 @@
 import React, { createContext, useState } from 'react'
 
+// Initial context
 export const initialContext = {
   topRated: [],
   upComing: [],
@@ -9,6 +10,7 @@ export const initialContext = {
   isError: false
 }
 
+// App context will have two properties which will used to set and get data from contetx
 export const AppContext = createContext({
   setRootState: () => {},
   rootState: {}

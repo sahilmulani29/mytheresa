@@ -4,12 +4,15 @@ import './carousels.scss'
 import { CATEGORIES_DATA } from '../../../constants/data-constant'
 
 const Carousels = ({ title, data, id, onMovieSelect }) => {
+  // To scroll carousel on left or right depend on button press
   const onCarouselClickHandler = (isNext) => {
     const box = document.getElementById(id)
     const width = box.clientWidth
+    // Scroll by actual width
     box.scrollLeft = isNext ? box.scrollLeft + width : box.scrollLeft - width
   }
 
+  // Call back on wishlist component to renove the movie from wishlist
   const onMovieClick = (movie) => {
     if (onMovieSelect) {
       onMovieSelect(movie)

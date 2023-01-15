@@ -6,6 +6,7 @@ import React from 'react'
 import Movies from '../../components/screens/movie/Movie'
 
 const mockMovieComponent = (isView) => {
+  //Mock Movie Componenet with all props
   const props = {
     category: 'nowPlaying',
     movieInfo: { mockMovieInfo },
@@ -31,12 +32,14 @@ describe('Movie component test cases', () => {
   test('Should redirect to movie details component', () => {
     render(mockMovieComponent(true))
     const btn = screen.getAllByTestId('movie')
+    // Click event to redirect on Movie Details
     fireEvent.click(btn[0])
   })
 
   test('Should remove movie from wishlist callback', () => {
     render(mockMovieComponent(false))
     const btn = screen.getAllByTestId('movie')
+    // To remove movire from wishLisy
     fireEvent.click(btn[0])
   })
 })

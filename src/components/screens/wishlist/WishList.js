@@ -11,12 +11,14 @@ const WishList = () => {
   const state = appCtx?.rootState
 
   useEffect(() => {
+    //  By default show first movie as selected on wish list
     if (state.wishList.length > 0) {
       setSelectedMovie(state.wishList[0])
     }
   }, [state])
 
   const onRemoveHandler = (id) => {
+    // Remove movie from wish list
     const wishList = state.wishList
     const index = state.wishList.findIndex((item) => item.id === id)
     wishList.splice(index, 1)
@@ -26,6 +28,7 @@ const WishList = () => {
     })
   }
 
+  // Select movie if clicked on carousel
   const onMovieSelect = (movie) => {
     setSelectedMovie(movie)
   }

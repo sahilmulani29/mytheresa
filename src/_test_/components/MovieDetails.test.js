@@ -11,6 +11,7 @@ import React from 'react'
 import MovieDetails from '../../components/screens/movie/MovieDetails'
 import { act } from 'react-test-renderer'
 
+// Mock use Parameter
 jest.mock('react-router-dom', () => ({
   ...jest.requireActual('react-router-dom'), // use actual for all non-hook parts
   useParams: () => ({
@@ -20,9 +21,11 @@ jest.mock('react-router-dom', () => ({
   useRouteMatch: () => ({ url: '/company/company-id1/team/team-id1' })
 }))
 
+// To mock fetch
 global.fetch = mockFetch(mockMovieDetails)
 
 const mockMovieDetailsComponent = (rootState) => {
+  //Mock Movie Details
   return (
     <AppContext.Provider
       value={{
