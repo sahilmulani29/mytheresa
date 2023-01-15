@@ -9,37 +9,37 @@ Open http://localhost:9500 to view it in the browser.
 
 4. To Run Test cases hit -> npm test
 
-5. To Check the Test coverages Hit -> npm run test -- --coverage
+5. To Check the Test coverage Hit -> npm run test -- --coverage --watchAll=false
 
 6. Builds the app for production to the build folder -> npm run build
 
 7. Start liniting with command -> npm run lint
 
-*** Imporvement ***
+*** Improvement ***
 Below are points which we can still impove
 
-1. Design and Animatation (CSS/SCSS)
-i. Due to lack of time, did not focused on SCSS and reponsive design, but surely it we can make responsive design, icons in the header secion.
-ii. Right use of SCSS -> Creating varibales and Mixin which will improve quality of SCSS
+1. Design and Animation  (CSS/SCSS)
+i. Due to lack of time, did not focused on SCSS and responsive design, but surely it we can make responsive design, icons in the header section.
+ii. Right use of SCSS -> Creating variables and Mixin which will improve quality of SCSS
 iii. Layout for wish list and movie detail page.
-iv. More atractive fonts
+iv. More attractive fonts
 v. UI experience
 
-2. Right API integration for for movies based on categories
+2. Right API integration for movies based on categories
 
 3. We can split the SCSS bundle for different components 
 
-4. Cetrallized store
-i. We cna convert Context to Redux state & Import Saga
+4. Centralized store
+i. We can convert Context to Redux state & Import Saga
 
 5. Error Handling
-i. Currenty it showing simple text if API fail, We can add layout for same.
+i. Currently it showing simple text if API fail, We can add layout for same.
 ii. We can also add error boundary
 
 6. Test Cases
 i. We can create snapshots of the components & write more cases for context
 
-9. We can add Accessblity Identification for Screen reading tools
+9. We can add Accessibility Identification for Screen reading tools
 
 
 # Configuration steps for this Project
@@ -75,10 +75,10 @@ Installed the Babel dependencies
 
 # *** FLow & Logic ***
 
-1. As soon as app components get loaded, Called the fetchHook which custome hook to get the categories and movie items.
+1. As soon as app components get loaded, Called the fetchHook which custom hook to get the categories and movie items.
 2. Created context to store the data from API, Same context will also hold loading state to show spinner and wishlist API list
 3. Refer Router component to navigate home, moviedetails & wish list section.
-4. Wrapped all components under Container component which has header ans Spinner component
+4. Wrapped all components under Container component which has header and Spinner component
 5. Created Carousel component to show the movie list
 6. Once clicked on movie image it will redirect to movie details component and the it has add to wish list button
 7. Created Wishlist component to show wish list items.
@@ -100,7 +100,7 @@ Installed the Babel dependencies
 
 *** Utils Module ***
 
-1. Organised common code in utils file.
+1. Organized common code in util file.
 
 *** Test Module ***
 
